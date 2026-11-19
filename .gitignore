@@ -1,0 +1,30 @@
+# ROS 2 / colcon build products
+turtlebot3_ws/build/
+turtlebot3_ws/install/
+turtlebot3_ws/log/
+
+# C/C++ build products
+*.o
+*.a
+*.so
+*.so.*
+*.dylib
+*.out
+*.exe
+*.obj
+*.pdb
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Runtime and local configuration
+*.log
+.env
+.env.*
+!.env.example
+
