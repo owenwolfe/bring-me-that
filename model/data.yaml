@@ -1,0 +1,8 @@
+path: /research/jortizguzman/CSCI585/model/dataset
+
+test: images/test
+train: images/train
+val: images/val
+
+names:
+  0: TENNIS BALL

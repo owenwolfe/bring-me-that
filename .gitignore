@@ -1,0 +1,16 @@
+# Python virtual environments
+.venv/
+venv/
+
+# Python-generated files
+__pycache__/
+*.pyc
+
+# Large YOLO datasets
+/datasets/
+
+# Training outputs
+runs/
+
+# Environment files
+.env
