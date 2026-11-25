@@ -30,3 +30,9 @@ Thumbs.db
 .env.*
 !.env.example
 
+
+# Python-generated files
+__pycache__/
+*.pyc
+
+
