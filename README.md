@@ -25,3 +25,9 @@ Running YOLO26 Tennis Bal Detection Model:
 - Have Jetpack configured (if using Jetson)
 - Have camera connected to device
 - Run 'run_model.py'
+
+## Notes
+- In addition to the Pi publisher script, the following command has to be run in a separate terminal on the Pi to convert the raw image data to the compresssed image data format: 
+```bash
+ros2 run image_transport republish raw in:=/camera/image_raw compressed out/compressed:=/camera/image_compressed
+```

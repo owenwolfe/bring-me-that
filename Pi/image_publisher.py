@@ -14,7 +14,8 @@
 import cv_bridge
 import rclpy
 from rclpy.node import Node
-from rclpy.qos import qos_profile_sensor_data
+#from rclpy.qos import qos_profile_sensor_data #FOR BEST_EFFORT
+from rclpy.qos import QoSProfile, ReliabilityPolicy
 from sensor_msgs.msg import Image
 import cv2
 
@@ -23,7 +24,10 @@ class Image_Publisher(Node):
 	def __init__(self):
 		'''Initialize the ROS2 node, and opencv camera processing'''
 		super().__init__("image_publisher")
-		self.publisher = self.create_publisher(Image, "/camera/image_raw", qos_profile_sensor_data)
+
+
+		qos = QoSProfile(depth=10, reliability=ReliabilityPolicy.RELIABLE)
+		self.publisher = self.create_publisher(Image, "/camera/image_raw", qos)
 		self.bridge = cv_bridge.CvBridge()
 
 		# OpenCV implementation for camera loading
