@@ -25,6 +25,14 @@ Thumbs.db
 # Runtime and local configuration
 *.log
 .env
+.venv
+.venv.*
 .env.*
 !.env.example
+
+
+# Python-generated files
+__pycache__/
+*.pyc
+
 
